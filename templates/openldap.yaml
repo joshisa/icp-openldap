@@ -26,6 +26,9 @@ metadata:
     app: {{.Release.Name}}
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: {{.Release.Name}}
   template:
     metadata:
       labels:
